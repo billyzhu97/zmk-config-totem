@@ -41,38 +41,6 @@
             require-prior-idle-ms = <175>;
             hold-trigger-on-release;
         };
-
-        mmv_turbo_up: mmv_turbo_up {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <2>;
-            bindings = <&mmv MOVE_UP>, <&mmv MOVE_UP>, <&mmv MOVE_UP>;
-        };
-
-        mmv_turbo_down: mmv_turbo_down {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <2>;
-            bindings = <&mmv MOVE_DOWN>, <&mmv MOVE_DOWN>, <&mmv MOVE_DOWN>;
-        };
-
-        mmv_turbo_left: mmv_turbo_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <2>;
-            bindings = <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>, <&mmv MOVE_LEFT>;
-        };
-
-        mmv_turbo_right: mmv_turbo_right {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <2>;
-            bindings = <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>, <&mmv MOVE_RIGHT>;
-        };
     };
 
     keymap {
@@ -107,19 +75,10 @@
 
         mouse {
             bindings = <
-       &none  &none  &none  &none  &none     &msc SCRL_UP    &mkp LCLK       &mmv_turbo_up    &mkp RCLK        &none
-       &none  &none  &none  &none  &none     &msc SCRL_DOWN  &mmv_turbo_left &mmv_turbo_down &mmv_turbo_right &none
- &none  &none  &none  &none  &none  &none     &none           &msc SCRL_LEFT  &msc SCRL_RIGHT  &none            &none  &none
-                      &none  &none  &trans    &none           &none           &mo 4
-            >;
-        };
-
-        precision {
-            bindings = <
-       &trans  &trans  &trans  &trans  &trans  &trans   &trans        &mmv MOVE_UP  &trans        &trans
-       &trans  &trans  &trans  &trans  &trans  &trans   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &trans
- &trans  &trans  &trans  &trans  &trans  &trans   &trans          &trans        &trans         &trans  &trans
-                      &trans  &trans  &trans  &trans  &trans        &trans
+       &none  &none  &none  &none  &none     &msc SCRL_UP    &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &none
+       &none  &none  &none  &none  &none     &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &none
+&none  &none  &none  &none  &none  &none     &none           &msc SCRL_LEFT  &msc SCRL_RIGHT  &none            &none  &none
+                     &none  &none  &trans    &none           &none           &none
             >;
         };
 

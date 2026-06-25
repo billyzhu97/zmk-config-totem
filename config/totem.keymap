@@ -24,10 +24,10 @@
 #define MOVE_DOWN  MOVE_Y(2400)
 #define MOVE_LEFT  MOVE_X(-2400)
 #define MOVE_RIGHT MOVE_X(2400)
-#define SLOW_MOVE_UP    MOVE_Y(-150)
-#define SLOW_MOVE_DOWN  MOVE_Y(150)
-#define SLOW_MOVE_LEFT  MOVE_X(-150)
-#define SLOW_MOVE_RIGHT MOVE_X(150)
+#define SLOW_MOVE_UP    MOVE_Y(-600)
+#define SLOW_MOVE_DOWN  MOVE_Y(600)
+#define SLOW_MOVE_LEFT  MOVE_X(-600)
+#define SLOW_MOVE_RIGHT MOVE_X(600)
 
 &mmv {
     acceleration-exponent = <1>;
@@ -104,7 +104,7 @@
        &none  &none  &none  &none  &none     &msc SCRL_DOWN  &mkp LCLK       &mmv MOVE_UP     &mkp RCLK        &none
        &none  &none  &none  &none  &none     &msc SCRL_UP    &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &none
 &none  &none  &none  &none  &none  &none     &none           &msc SCRL_LEFT  &msc SCRL_RIGHT  &none            &none  &none
-                     &none  &none  &trans    &mo 4           &none           &none
+                     &none  &mo 4  &trans    &none           &none           &none
             >;
         };
 

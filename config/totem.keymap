@@ -99,7 +99,7 @@
         functional {
             bindings = <
         &kp F1   &kp F2     &kp F3                 &kp F4               &kp F5               &kp F6    &kp F7      &kp F8             &kp F9           &kp F10
-        &none    &none      &kp LGUI(LSHIFT(N3))   &kp LGUI(LSHIFT(N4)) &kp LGUI(LSHIFT(N5)) &kp LEFT  &kp DOWN    &kp UP             &kp RIGHT        &kp F11
+        &none    &none      &kp LG(LS(N3))         &kp LG(LS(N4))       &kp LG(LS(N5))       &kp LEFT  &kp DOWN    &kp UP             &kp RIGHT        &kp F11
 &trans  &none    &kp C_PREV &kp C_PLAY_PAUSE       &kp C_NEXT           &none                &none     &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp F12  &kp CAPSLOCK
                             &kp LEFT_SHIFT         &trans               &trans               &trans    &trans      &trans
             >;

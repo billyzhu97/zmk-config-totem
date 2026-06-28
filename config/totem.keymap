@@ -38,6 +38,17 @@
 };
 
 / {
+    combos {
+      compatible = "zmk,combos";
+
+      caps_combo {
+        timeout-ms = <150>;
+        key-positions = <13 16>;
+        bindings = <&kp CAPSLOCK>;
+        layers = <0>;
+      };
+    };
+
     behaviors {
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
